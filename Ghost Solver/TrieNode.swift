@@ -82,6 +82,9 @@ class TrieNode : NSObject {
     }
     
     private func traverse(list: inout [String], word:String) {
+        if list.count > 5 {
+            return
+        }
         if isLeaf() && word.count > 3 {
             list.append(word)
         }
